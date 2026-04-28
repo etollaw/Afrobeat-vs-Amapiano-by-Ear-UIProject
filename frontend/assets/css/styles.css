@@ -6,6 +6,10 @@
   --muted: #5d564d;
   --accent: #1f6f5f;
   --accent-soft: #d8ebe6;
+  --success: #1f6f5f;
+  --success-soft: #e9f7f1;
+  --danger: #b2452f;
+  --danger-soft: #fff0ec;
   --border: #d9cfbf;
   --shadow: 0 18px 40px rgba(55, 40, 16, 0.08);
 }
@@ -190,6 +194,16 @@ h1 {
   font-weight: 700;
 }
 
+.stack-meta--correct {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.stack-meta--incorrect {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
 .team-list,
 .contract-list {
   list-style: none;
@@ -325,11 +339,11 @@ h1 {
 }
 
 .quiz-feedback--correct {
-  color: var(--accent);
+  color: var(--success);
 }
 
 .quiz-feedback--incorrect {
-  color: #a33f2a;
+  color: var(--danger);
 }
 
 .quiz-results-grid {
@@ -346,6 +360,28 @@ h1 {
 
 .quiz-review-card {
   animation: quiz-rise 260ms ease;
+}
+
+.quiz-review-card--correct {
+  border-color: rgba(31, 111, 95, 0.45);
+  background: linear-gradient(180deg, var(--success-soft) 0%, #ffffff 100%);
+  box-shadow: inset 0 0 0 1px rgba(31, 111, 95, 0.08);
+}
+
+.quiz-review-card--incorrect {
+  border-color: rgba(178, 69, 47, 0.45);
+  background: linear-gradient(180deg, var(--danger-soft) 0%, #ffffff 100%);
+  box-shadow: inset 0 0 0 1px rgba(178, 69, 47, 0.08);
+}
+
+.quiz-review-card--correct strong,
+.quiz-review-card--correct h4 {
+  color: var(--success);
+}
+
+.quiz-review-card--incorrect strong,
+.quiz-review-card--incorrect h4 {
+  color: var(--danger);
 }
 
 .quiz-stat {

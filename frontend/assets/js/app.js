@@ -140,7 +140,7 @@ function renderQuiz(quiz) {
         <ul class="quiz-highlight-list">${highlights}</ul>
         <div class="quiz-actions">
           <button class="button-link button-link--accent" type="button" data-action="start-quiz">${quiz.intro.primaryActionLabel}</button>
-          <a class="button-link" href="/pages/learning.html">${quiz.intro.secondaryActionLabel}</a>
+          <a class="button-link" href="/pages/learning/index.html">${quiz.intro.secondaryActionLabel}</a>
         </div>
       </article>
     `;
@@ -244,8 +244,8 @@ function renderQuiz(quiz) {
     const answerCards = state.answers
       .map(
         (answer, index) => `
-          <article class="quiz-review-card">
-            <div class="stack-meta">${answer.isCorrect ? "Correct" : "Needs review"}</div>
+          <article class="quiz-review-card ${answer.isCorrect ? "quiz-review-card--correct" : "quiz-review-card--incorrect"}">
+            <div class="stack-meta ${answer.isCorrect ? "stack-meta--correct" : "stack-meta--incorrect"}">${answer.isCorrect ? "Correct" : "Needs review"}</div>
             <h4>${index + 1}. ${answer.prompt}</h4>
             <p><strong>Your answer:</strong> ${answer.selectedOption}</p>
             <p><strong>Correct answer:</strong> ${answer.correctOption}</p>
@@ -278,7 +278,7 @@ function renderQuiz(quiz) {
         <div class="quiz-actions">
           <button class="button-link button-link--accent" type="button" data-action="review-answers">Review answers</button>
           <button class="button-link" type="button" data-action="restart-quiz">Restart quiz</button>
-          <a class="button-link" href="/pages/learning.html">Back to learning</a>
+          <a class="button-link" href="/pages/learning/index.html">Back to learning</a>
         </div>
       </article>
       <section class="quiz-review-preview">
@@ -303,8 +303,8 @@ function renderQuiz(quiz) {
     const reviewCards = state.answers
       .map(
         (answer, index) => `
-          <article class="quiz-review-card">
-            <div class="stack-meta">${answer.isCorrect ? "Correct" : "Needs review"}</div>
+          <article class="quiz-review-card ${answer.isCorrect ? "quiz-review-card--correct" : "quiz-review-card--incorrect"}">
+            <div class="stack-meta ${answer.isCorrect ? "stack-meta--correct" : "stack-meta--incorrect"}">${answer.isCorrect ? "Correct" : "Needs review"}</div>
             <h4>${index + 1}. ${answer.prompt}</h4>
             <p><strong>Your answer:</strong> ${answer.selectedOption}</p>
             <p><strong>Correct answer:</strong> ${answer.correctOption}</p>
