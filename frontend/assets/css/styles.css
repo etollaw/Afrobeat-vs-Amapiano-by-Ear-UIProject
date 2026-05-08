@@ -288,6 +288,34 @@ h1 {
   gap: 0.75rem;
 }
 
+.quiz-media-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(31, 111, 95, 0.08) 0%, rgba(255, 255, 255, 0.92) 100%);
+}
+
+.quiz-media-card h4 {
+  margin: 0;
+}
+
+.quiz-media-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.quiz-audio-player {
+  width: 100%;
+}
+
+.quiz-listen-for {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
 .quiz-option {
   display: grid;
   grid-template-columns: auto 1fr;

@@ -52,27 +52,28 @@
   },
   "quiz": {
     "title": "Knowledge Check",
-    "summary": "Test what you picked up about Afrobeat and Amapiano with a guided quiz flow.",
+    "summary": "Test what you picked up about Afrobeat and Amapiano with a guided quiz flow that now includes real listening challenges.",
     "intro": {
       "eyebrow": "Quiz challenge",
-      "description": "Move through five listening-and-culture prompts, get immediate feedback, and see how well you can separate the two genres.",
+      "description": "Move through a mix of concept checks and real listening clips, get immediate feedback, and see how well you can separate the two genres by ear.",
       "primaryActionLabel": "Start quiz",
       "secondaryActionLabel": "Review learning path",
       "highlights": [
-        "5 multiple-choice questions",
+        "10 multiple-choice questions",
+        "5 listen-and-classify audio clips",
         "Instant answer feedback after every choice",
         "Final score with result tier and answer review"
       ]
     },
-    "passingScore": 4,
+    "passingScore": 7,
     "resultBands": [
       {
-        "minScore": 5,
+        "minScore": 9,
         "title": "Genre guide",
         "message": "You can clearly distinguish Afrobeat and Amapiano across sound, origin, and performance feel."
       },
       {
-        "minScore": 3,
+        "minScore": 7,
         "title": "On the right track",
         "message": "You understand the main differences, but a quick review will help lock in the details."
       },
@@ -157,6 +158,126 @@
         "correctFeedback": "Correct. The laid-back dance groove and repeated piano phrasing are classic clues for Amapiano.",
         "incorrectFeedback": "Not quite. That smooth, piano-driven dance feel is usually associated with Amapiano.",
         "insight": "Afrobeat can be danceable too, but its identity is less centered on those floating piano motifs."
+      },
+      {
+        "id": "listen-afrobeat-woman",
+        "prompt": "Listen to the clip and choose the genre that fits it best.",
+        "context": "Let the groove settle first, then decide whether it feels more live-band Afrobeat or smoother Amapiano.",
+        "audio": {
+          "src": "/assets/audio/afrobeat/woman-rema.webm",
+          "label": "Listening clip 1",
+          "caption": "Focus on the percussion energy, the vocal presence, and whether the groove feels band-led or club-led.",
+          "listenFor": [
+            "More direct vocal presence",
+            "Percussion-forward groove",
+            "A stronger live-performance feel"
+          ]
+        },
+        "options": [
+          "Afrobeat",
+          "Amapiano",
+          "Neither genre"
+        ],
+        "answerIndex": 0,
+        "correctFeedback": "Correct. The clip leans Afrobeat with its lively vocal presence, grounded groove, and more performance-driven rhythmic energy.",
+        "incorrectFeedback": "Not quite. This clip fits Afrobeat more than Amapiano because it feels more vocal-forward and live-groove driven.",
+        "insight": "This listening clip is \"Woman\" by Rema. The clue is less about memorizing the song and more about noticing the rhythmic lift and performance energy."
+      },
+      {
+        "id": "listen-amapiano-water",
+        "prompt": "Listen to the clip and choose the genre that fits it best.",
+        "context": "Pay attention to the pulse underneath the groove and whether the track feels airy and hypnotic or more stage-driven.",
+        "audio": {
+          "src": "/assets/audio/amapiano/water-tyla.webm",
+          "label": "Listening clip 2",
+          "caption": "Listen for floating piano texture, smoother bounce, and a deep bass pattern underneath the vocals.",
+          "listenFor": [
+            "Airy atmosphere",
+            "Deep rolling bass pulse",
+            "Dancefloor glide over live-band punch"
+          ]
+        },
+        "options": [
+          "Afrobeat",
+          "Amapiano",
+          "It is impossible to tell"
+        ],
+        "answerIndex": 1,
+        "correctFeedback": "Correct. The clip fits Amapiano with its lighter, smoother feel and deep bass-led dance groove.",
+        "incorrectFeedback": "Not quite. This one is Amapiano because the rhythm feels more hypnotic and club-oriented than Afrobeat.",
+        "insight": "This listening clip is \"Water\" by Tyla. The big clue is the floating texture and log-drum-style pulse rather than a live-band push."
+      },
+      {
+        "id": "listen-afrobeat-kese",
+        "prompt": "Listen to the clip and choose the genre that fits it best.",
+        "context": "Use what you learned about tempo feel and instrumentation instead of focusing on the artist name.",
+        "audio": {
+          "src": "/assets/audio/afrobeat/kese-wizkid.webm",
+          "label": "Listening clip 3",
+          "caption": "Notice whether the rhythm feels grounded and percussive or more spacious and piano-led.",
+          "listenFor": [
+            "Grounded groove",
+            "Percussion answering the rhythm",
+            "Less of the airy piano wash heard in Amapiano"
+          ]
+        },
+        "options": [
+          "Afrobeat",
+          "Amapiano",
+          "House"
+        ],
+        "answerIndex": 0,
+        "correctFeedback": "Correct. This clip reads as Afrobeat because the groove lands with a more direct percussive drive and less of an Amapiano float.",
+        "incorrectFeedback": "Not quite. The rhythmic shape here is closer to Afrobeat than Amapiano.",
+        "insight": "This listening clip is \"Kese\" by Wizkid. The cue is the grounded pulse and percussive movement rather than a deep rolling log-drum bounce."
+      },
+      {
+        "id": "listen-amapiano-tshwala",
+        "prompt": "Listen to the clip and choose the genre that fits it best.",
+        "context": "Ask yourself whether the beat feels club-hypnotic and bass-led or more like a live-band groove.",
+        "audio": {
+          "src": "/assets/audio/amapiano/tshwala-bam.webm",
+          "label": "Listening clip 4",
+          "caption": "Listen for a repetitive dance pulse, a smoother bounce, and a deep bass personality.",
+          "listenFor": [
+            "Bass-led bounce",
+            "Club-ready repetition",
+            "Smoother, more hypnotic pacing"
+          ]
+        },
+        "options": [
+          "Afrobeat",
+          "Amapiano",
+          "Afro-swing"
+        ],
+        "answerIndex": 1,
+        "correctFeedback": "Correct. The clip fits Amapiano with its repetitive dance pulse and deeper bass-led momentum.",
+        "incorrectFeedback": "Not quite. This one lands in Amapiano because of its hypnotic bounce and club-oriented low-end.",
+        "insight": "This listening clip is \"Tshwala Bam\". The strongest clue is the rolling, bass-centered groove rather than live-band percussion."
+      },
+      {
+        "id": "listen-afrobeat-holy-ghost",
+        "prompt": "Listen to the clip and choose the genre that fits it best.",
+        "context": "This last listening question is about confidence: pick the genre whose overall feel matches the clip best.",
+        "audio": {
+          "src": "/assets/audio/afrobeat/holy-ghost-omah-lay.webm",
+          "label": "Listening clip 5",
+          "caption": "Do not chase every detail. Decide whether the whole track leans more toward Afrobeat's performance feel or Amapiano's club glide.",
+          "listenFor": [
+            "Vocal-forward movement",
+            "Rhythmic punch over haze",
+            "Performance energy over ambient float"
+          ]
+        },
+        "options": [
+          "Afrobeat",
+          "Amapiano",
+          "Gqom"
+        ],
+        "answerIndex": 0,
+        "correctFeedback": "Correct. The clip leans Afrobeat because it feels more vocal-driven and rhythmically assertive than Amapiano.",
+        "incorrectFeedback": "Not quite. This clip fits Afrobeat more than Amapiano because the overall energy is more direct and performance-centered.",
+        "insight": "This listening clip is \"Holy Ghost\" by Omah Lay. By this point, the goal is to recognize the bigger feel of the groove, not just one instrument."
       }
     ]
   },

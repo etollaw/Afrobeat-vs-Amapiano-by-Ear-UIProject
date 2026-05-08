@@ -115,6 +115,29 @@ function buildQuizResults(quiz, answers) {
   };
 }
 
+function renderQuizMedia(question) {
+  if (!question.audio) {
+    return "";
+  }
+
+  const listenFor = Array.isArray(question.audio.listenFor)
+    ? question.audio.listenFor.map((item) => `<li>${item}</li>`).join("")
+    : "";
+
+  return `
+    <section class="quiz-media-card">
+      <div class="stack-meta">Listening challenge</div>
+      <h4>${question.audio.label}</h4>
+      <p>${question.audio.caption}</p>
+      <audio class="quiz-audio-player" controls preload="metadata">
+        <source src="${question.audio.src}" type="audio/webm">
+        Your browser does not support the audio element.
+      </audio>
+      ${listenFor ? `<ul class="quiz-listen-for">${listenFor}</ul>` : ""}
+    </section>
+  `;
+}
+
 function renderQuiz(quiz) {
   document.getElementById("page-title").textContent = quiz.title;
   document.getElementById("page-summary").textContent = quiz.summary;
@@ -175,6 +198,7 @@ function renderQuiz(quiz) {
           <div class="quiz-progress-bar" style="width: ${getProgressValue(state.currentIndex, quiz.questions.length)}%"></div>
         </div>
         <p class="quiz-context">${question.context}</p>
+        ${renderQuizMedia(question)}
         <h3>${question.prompt}</h3>
         <div class="quiz-options">${options}</div>
       </article>
@@ -220,6 +244,7 @@ function renderQuiz(quiz) {
     quizRoot.innerHTML = `
       <article class="stack-item quiz-card">
         <div class="stack-meta">${answer.isCorrect ? "Correct answer" : "Review this one"}</div>
+        ${renderQuizMedia(question)}
         <h3>${question.prompt}</h3>
         <div class="quiz-options">${options}</div>
         <p class="quiz-feedback ${answer.isCorrect ? "quiz-feedback--correct" : "quiz-feedback--incorrect"}" role="status">${answer.feedback}</p>
@@ -410,7 +435,8 @@ if (typeof module !== "undefined" && module.exports) {
     getProgressText,
     getProgressValue,
     getResultBand,
-    getScoreBreakdown
+    getScoreBreakdown,
+    renderQuizMedia
   };
 }
 
